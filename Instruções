@@ -1,0 +1,58 @@
+## Como Executar o Sistema ##
+Pré-requisitos: JDK (Java Development Kit) 8 ou superior instalado e configurado no PATH do sistema.
+
+Passo 1: Compilar os Arquivos
+Abra um terminal ou prompt de comando.
+
+Navegue até o diretório onde você salvou os arquivos .java.
+
+Compile todos os arquivos com o seguinte comando:
+
+javac *.java
+
+Isso irá gerar os arquivos .class correspondentes.
+
+Passo 2: Iniciar o Servidor
+No mesmo terminal, execute o servidor:
+
+## java ChatServer ##
+
+O servidor será iniciado e exibirá a mensagem: [*] Servidor de chat iniciando na porta 55555.... Ele está pronto para aceitar conexões.
+
+Passo 3: Iniciar Clientes
+Abra um novo terminal para cada cliente que você deseja conectar.
+
+Navegue até o mesmo diretório onde os arquivos .class foram gerados.
+
+Execute o script do cliente:
+
+## java ChatClient ##
+
+O programa solicitará um nome de usuário. Digite um nome único e pressione Enter.
+
+Repita os passos 1 a 4 para conectar quantos usuários desejar.
+
+Observação: Se o cliente e o servidor estiverem rodando em máquinas diferentes na mesma rede, altere a variável SERVER_HOST no arquivo ChatClient.java para o endereço IP da máquina onde o servidor está sendo executado e recompile os arquivos.
+
+**Funcionalidades e Comandos**
+
+Depois de conectado, você pode usar os seguintes comandos e formatos de mensagem:
+
+Mensagem Privada:
+@username:Olá, tudo bem?
+
+Criar um Grupo:
+/creategroup nome_do_grupo
+
+Entrar em um Grupo:
+/joingroup nome_do_grupo
+
+Mensagem em Grupo:
+#nome_do_grupo:Olá a todos!
+
+Enviar um Arquivo:
+/sendfile @username /caminho/para/o/arquivo.txt
+/sendfile #nome_do_grupo /caminho/para/o/arquivo.jpg
+
+Sair do Chat:
+/exit
