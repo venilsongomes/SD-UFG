@@ -1,8 +1,6 @@
-**Curso: Sistemas Distribuídos**
-
-**Docente: Vagner Sacramento**
-
-**Discente:Venilson Gomes Rocha - 201912649**
+**Curso: Sistemas Distribuídos**:
+**Docente: Vagner Sacramento**:
+**Discente:Venilson Gomes Rocha - 201912649**:
 
 
 **Relatório Técnico: Desenvolvimento de um Sistema de Chat com Sockets**
