@@ -7,7 +7,7 @@
 
 
 **Introdução**<br>
-Este relatório técnico detalha o desenvolvimento de um sistema de chat cliente-servidor em Java<br>**
+Este relatório técnico detalha o desenvolvimento de um sistema de chat cliente-servidor em Java<br>
 utilizando sockets para viabilizar a comunicação em rede. A aplicação implementada suporta funcionalidades essenciais,<br>
 como troca de mensagens privadas, comunicação em grupos e transferência de arquivos, atendendo aos requisitos funcionais<br>
 propostos para um ambiente de chat interativo e eficiente.
