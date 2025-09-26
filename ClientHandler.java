@@ -1,6 +1,8 @@
 import java.io.*;
 import java.net.*;
 
+import javax.swing.JOptionPane;
+
 /**
  * Lida com toda a comunicação para um único cliente em uma thread separada.
  */
@@ -40,16 +42,17 @@ public class ClientHandler implements Runnable {
                 clientSocket.close();
                 return;
             }
-
+          
             ChatServer.addClient(this.username, this);
-
+            JOptionPane.showMessageDialog(null,"Conectado ao server");
+            
             // Envia mensagens de boas-vindas e instruções
             sendMessage("Bem-vindo ao chat, " + username + "!");
             sendMessage("Mensagens em grupo: #nome_do_grupo:mensagem");
             sendMessage("Mensagens privadas: @nome_do_usuario:mensagem");
             sendMessage("Criar Grupo: /creategroup nome_do_grupo");
             sendMessage("Adiciona-se ao Grupo: /joingroup nome_do_grupo") ;
-            sendMessage("Enviar Arquivo: /sendfile @user | #group filename filesize");
+            sendMessage("Enviar Arquivo: /sendfile @user | #group name  caminho do arquivo");
 
             // Loop principal para ler mensagens do cliente
             

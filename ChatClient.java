@@ -5,6 +5,8 @@ import java.net.*;
 // Importa classe para ler entrada do usuário
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 // Classe principal do cliente de chat
 public class ChatClient {
     // Endereço do servidor
@@ -179,6 +181,7 @@ class ReceiverThread implements Runnable {
 
             System.out.println("\n[ARQUIVO] Recebendo '" + filename + " de " + remetente + ".");
             System.out.println("Salvando em: " + file.getAbsolutePath());
+            //JOptionPane.showMessageDialog(null,"Arquivo recebido de " + remetente);
 
             byte[] buffer = new byte[4096];
             int bytesRead;
@@ -197,6 +200,7 @@ class ReceiverThread implements Runnable {
         } catch (IOException | NumberFormatException e) {
             // Erro ao receber arquivo
             System.err.println("[ERRO] Falha ao receber o arquivo: " + e.getMessage());
+             //JOptionPane.showConfirmDialog(null,"Erro ao receber Arquivo");
             e.printStackTrace();
         }
     }

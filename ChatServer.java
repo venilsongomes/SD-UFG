@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import javax.swing.JOptionPane;
+
 /**
  * Classe principal do servidor de chat.
  * Aceita conexões de clientes e cria uma thread ClientHandler para cada um.
@@ -25,7 +27,8 @@ public class ChatServer {
     // Método principal do servidor
     public static void main(String[] args) {
         // Exibe mensagem de inicialização
-        System.out.println("Servidor de chat iniciando na porta " + PORT + " e IP " + IP_ADDRESS + "...");
+         JOptionPane.showMessageDialog(null,"Servidor Iniciado !!!");
+         System.out.println("iniciado na porta " + PORT + " e IP " + IP_ADDRESS + "...");
 
         // Tenta abrir o socket do servidor na porta definida
         try (ServerSocket serverSocket = new ServerSocket(PORT, 50, java.net.InetAddress.getByName(IP_ADDRESS))) {
